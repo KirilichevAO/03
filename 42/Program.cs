@@ -6,22 +6,24 @@
 Console.Write("Введите число для приобразования: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
-int TransToBinary(int num)
-{
-    int result = 0;
-    int i = 1;
+// Другой вариант реализации
+// int TransToBinary(int num)
+// {
+//     int result = 0;
+//     int i = 1;
 
-    while (num > 0)
-    {
-        result += num % 2 * i;
-        num /= 2;
-        i *= 10;
-    }
-    return result;
-}
-int transToBinary = TransToBinary(number);
-Console.WriteLine($"Приобразованное число {transToBinary}");
+//     while (num > 0)
+//     {
+//         result += num % 2 * i;
+//         num /= 2;
+//         i *= 10;
+//     }
+//     return result;
+// }
+// int transToBinary = TransToBinary(number);
+// Console.WriteLine($"Приобразованное число {transToBinary}");
 
+// Другой вариант реализации
 // Console.Write("Введите число для приобразования: ");
 // long a = Convert.ToInt32(Console.ReadLine());
 
@@ -36,3 +38,13 @@ Console.WriteLine($"Приобразованное число {transToBinary}");
 //     number = number + b * c;
 // }
 // Console.WriteLine($"Приобразованное число {number / 10}");
+
+//  Другой вариант реализации через рекурсию!!!
+void DecToBin(int num)
+{
+    if (num == 0) return;
+    DecToBin(num / 2);
+    Console.Write(num % 2);
+}
+
+DecToBin(number);
