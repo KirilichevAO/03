@@ -41,5 +41,7 @@ void PrintArrayDouble(double[,] array)
 }
 
 CreateArrayDouble(array);
+
 PrintArrayDouble(array);
+
 Console.WriteLine();
